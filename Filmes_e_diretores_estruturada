@@ -1,6 +1,8 @@
+#Criar as listas
 diretores = []
 filmes = []
 
+#Função para criar diretor
 def criar_diretor():
     nome = input("Nome do diretor: ")
     idade = int(input("Idade do diretor: "))
@@ -13,6 +15,7 @@ def criar_diretor():
     diretores.append(diretor)
     print(f"Diretor {nome} criado com sucesso!")
 
+#Função para criar filmes
 def criar_filme():
     titulo = input("Título do filme: ")
     ano = int(input("Ano do filme: "))
@@ -37,6 +40,7 @@ def buscar_diretor_por_nome(nome):
             return diretor
     return None
 
+#Função para atualizar diretor
 def atualizar_diretor():
     nome_antigo = input("Nome do diretor a ser atualizado: ")
     novo_nome = input("Novo nome do diretor: ")
@@ -57,6 +61,7 @@ def atualizar_diretor_data(nome_antigo, novo_nome, nova_idade, nova_nacionalidad
             return True
     return False
 
+#Função para atualizar filmes
 def atualizar_filme():
     titulo_antigo = input("Título do filme a ser atualizado: ")
     novo_titulo = input("Novo título do filme: ")
@@ -77,6 +82,7 @@ def atualizar_filme_data(titulo_antigo, novo_titulo, novo_ano, novo_genero):
             return True
     return False
 
+#Função para excluir um diretor
 def excluir_diretor():
     nome_diretor = input("Nome do diretor a ser excluído: ")
     sucesso = excluir_diretor_data(nome_diretor)
@@ -92,6 +98,7 @@ def excluir_diretor_data(nome_diretor):
             return True
     return False
 
+#Função para excluir um filme
 def excluir_filme():
     titulo_filme = input("Título do filme a ser excluído: ")
     sucesso = excluir_filme_data(titulo_filme)
@@ -107,6 +114,7 @@ def excluir_filme_data(titulo_filme):
             return True
     return False
 
+#Função para listar diretores
 def listar_diretores():
     print("\nDiretor(es) registrado(s):")
     if diretores:
@@ -115,6 +123,7 @@ def listar_diretores():
     else:
         print("Nenhum diretor registrado.")
 
+#Função para listar filmes
 def listar_filmes():
     print("\nFilme(s) registrado(s):")
     if filmes:
@@ -123,17 +132,18 @@ def listar_filmes():
     else:
         print("Nenhum filme registrado.")
 
+#Menu
 def menu():
     while True:
         print("\nMenu:")
         print("1. Criar Diretor")
         print("2. Criar Filme")
-        print("4. Atualizar Diretor")
-        print("5. Atualizar Filme")
-        print("6. Excluir Diretor")
-        print("7. Excluir Filme")
-        print("8. Listar Diretores")
-        print("9. Listar Filmes")
+        print("3. Atualizar Diretor")
+        print("4. Atualizar Filme")
+        print("5. Excluir Diretor")
+        print("6. Excluir Filme")
+        print("7. Listar Diretores")
+        print("8. Listar Filmes")
         print("0. Sair")
         escolha = input("Escolha uma opção: ")
 
